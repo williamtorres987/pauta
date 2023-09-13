@@ -8,6 +8,7 @@ import java.util.Optional;
 
 @Service
 public class UsuarioService {
+
     private UsuarioRepository usuarioRepository;
 
     public UsuarioService(UsuarioRepository usuarioRepository) {

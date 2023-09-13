@@ -1,13 +1,12 @@
 package com.votacao.pauta.service;
-
 import com.votacao.pauta.models.Pauta;
 import com.votacao.pauta.repository.PautaRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.Optional;
 
 @Service
 public class PautaService {
+
     private PautaRepository pautaRepository;
 
     public PautaService(PautaRepository pautaRepository) {
