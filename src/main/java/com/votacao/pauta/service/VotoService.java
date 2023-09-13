@@ -16,8 +16,8 @@ public class VotoService {
     public Voto inserirVoto (Voto voto) {
         return votoRepository.save(voto);
     }
+
     public Optional<Voto> buscarVoto(Long id) {
         return votoRepository.findById(id);
     }
-
 }
