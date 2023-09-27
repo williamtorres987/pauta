@@ -13,8 +13,13 @@ public class UsuarioService {
         this.usuarioRepository = usuarioRepository;
     }
 
-    public Optional <Usuario> buscarUsuario(Long id) {
-        return usuarioRepository.findById(id);
+    public Usuario buscarUsuario(Long id) {
+        Optional<Usuario> usuario = usuarioRepository.findById(id);
+        if (usuario.isPresent()) {
+            return usuario.get();
+        } else {
+            throw new RuntimeException("Usuário Inexistente.");
+        }
     }
 
     public Usuario inserirUsuario( Usuario usuario) {
