@@ -16,9 +16,8 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
-    @GetMapping("{id}")
-
-    public Optional<Usuario> retornarUsuario(@PathVariable Long id) {
+    @GetMapping("/{id}")
+    public Usuario retornarUsuario(@PathVariable Long id) {
         return usuarioService.buscarUsuario(id);
     }
 
