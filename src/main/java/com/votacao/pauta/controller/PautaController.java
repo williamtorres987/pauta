@@ -16,7 +16,7 @@ public class PautaController {
     }
 
     @GetMapping("{id}")
-    public Optional<Pauta> retonarPauta(@PathVariable Long id) {
+    public Pauta retonarPauta(@PathVariable Long id) {
         return pautaService.buscarPauta(id);
 
     }

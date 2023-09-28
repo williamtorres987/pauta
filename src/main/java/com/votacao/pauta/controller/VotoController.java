@@ -8,13 +8,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 @RestController
 @RequestMapping("/voto")
-
 public class VotoController {
     private VotoService votoService;
     public VotoController (VotoService votoService) { this.votoService = votoService;}
 
     @GetMapping("{id}")
-    public Optional<Voto> retornarVoto(@PathVariable Long id) {
+    public Voto retornarVoto(@PathVariable Long id) {
         return votoService.buscarVoto(id);
     }
 

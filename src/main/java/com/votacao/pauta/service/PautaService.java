@@ -1,7 +1,9 @@
 package com.votacao.pauta.service;
+
 import com.votacao.pauta.models.Pauta;
 import com.votacao.pauta.repository.PautaRepository;
 import org.springframework.stereotype.Service;
+
 import java.util.Optional;
 
 @Service
@@ -21,7 +23,12 @@ public class PautaService {
         }
     }
 
-    public Optional<Pauta> buscarPauta(Long id) {
-        return pautaRepository.findById(id);
+    public Pauta buscarPauta(Long id) {
+        Optional<Pauta> pauta = pautaRepository.findById(id);
+        if (pauta.isPresent()) {
+            return pauta.get();
+        } else {
+            throw new RuntimeException("Pauta Inexistente");
+        }
     }
 }
