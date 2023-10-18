@@ -19,7 +19,7 @@ public class PautaService {
         if (pauta.getDescricao().isEmpty()) {
             throw new RuntimeException("Não é possível criar uma pauta sem descrição");
         } else {
-            return pautaRepository.save(pauta);
+            return pautaRepository.save(pauta)
         }
     }
 
