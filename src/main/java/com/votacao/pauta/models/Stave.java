@@ -7,12 +7,12 @@ import jakarta.persistence.Id;
 
 import java.util.Date;
 @Entity
-public class Pauta {
+public class Stave {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
-    private String descricao;
-    private Date prazo;
+    private String description;
+    private Date deadline;
 
     public Long getId() {
         return id;
@@ -22,19 +22,19 @@ public class Pauta {
         this.id = id;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public Date getPrazo() {
-        return prazo;
+    public Date getDeadline() {
+        return deadline;
     }
 
-    public void setPrazo(Date prazo) {
-        this.prazo = prazo;
+    public void setDeadline(Date deadline) {
+        this.deadline = deadline;
     }
 }

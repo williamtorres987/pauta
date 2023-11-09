@@ -13,8 +13,9 @@ public class HttpErrorExceptionHandler {
 
   @ExceptionHandler(ObjectNotFoundException.class)
   public ResponseEntity<ApiError> notFound(ObjectNotFoundException ex) {
-    return buildErrorResponse(HttpStatus.NOT_FOUND,
-        "Não foi possível encontrar " + ex.getEntityName());
+    return buildErrorResponse(HttpStatus.NOT_FOUND, "Não foi possível encontrar " + ex.getEntityName());
+
+
   }
 
   @ExceptionHandler(ForbiddenException.class)

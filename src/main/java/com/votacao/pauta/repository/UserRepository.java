@@ -1,9 +1,10 @@
 package com.votacao.pauta.repository;
 
-import com.votacao.pauta.models.Pauta;
+import com.votacao.pauta.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PautaRepository extends JpaRepository<Pauta,Long>  {
+public interface UserRepository extends JpaRepository <User, Long>  {
+
 }

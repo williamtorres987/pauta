@@ -1,10 +1,10 @@
-package com.votacao.pauta;
+package com.votacao.stave;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PautaApplicationTests {
+class StaveApplicationTests {
 
 	@Test
 	void contextLoads() {
