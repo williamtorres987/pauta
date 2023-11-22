@@ -25,7 +25,7 @@ public class UserService {
     }
 
     public User insertUser( User user) {
-        if (user.getNome().isEmpty()) {
+        if (user.getName().isEmpty()) {
             throw new BadRequestException("Não é possível criar um usuário com nome vazio");
         } else {
             return userRepository.save(user);
